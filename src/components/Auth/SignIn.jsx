@@ -36,7 +36,7 @@ function SignIn() {
 
   const handleSubmit = async (values) => {
     try {
-      const response = await fetch('/api/v1/auth/login', {
+      const response = await fetch('https://xmyjrw3dcw.us-west-2.awsapprunner.com/api/v1/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -45,9 +45,9 @@ function SignIn() {
           email: values.email,
           password: values.password,
           
-        }),
+        })
       });
-
+      console.log(response);
       if (!response.ok) {
         throw new Error('Login failed');
       }

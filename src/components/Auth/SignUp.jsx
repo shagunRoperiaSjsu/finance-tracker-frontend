@@ -32,7 +32,7 @@ function SignUp() {
 
   const handleSubmit = async (values) => {
     try {
-      const response = await fetch('/api/v1/auth/register', {
+      const response = await fetch('https://xmyjrw3dcw.us-west-2.awsapprunner.com/api/v1/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
